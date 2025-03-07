@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-
 @layer base {
+
+  body {
+    @apply font-sans bg-[#0E0C15] text-[#FFFFFF];
+  }
 
   h1 {
     @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]
@@ -10,4 +13,12 @@
   button {
     @apply text-xs font-bold uppercase tracking-wider
   }
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-prime {
+  color: #AC6AFF;
 }
