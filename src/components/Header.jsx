@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { brainwave } from "../assets"
 import { navigation } from "../constants";
 
 import { useLocation  } from 'react-router-dom';
 import Button from './Button';
-import ButtonGradient from '../assets/svg/ButtonGradient';
+import MenuSvg from "../assets/svg/MenuSvg"
+import HamburgerMenu from './design/HamburgerMenu';
 
 
 const Header = () => {
   const pathname = useLocation();
+  const [openNavigation, setOpenNavigation] = useState(true)
+  
+  const toggleNavigation = () => {
+    if(openNavigation) {
+      setOpenNavigation(false);
+    }
+    else {
+      setOpenNavigation(true)
+    }
+  }
   return (
-    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm">
+    <div className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm
+      ${openNavigation ? 'bg-[#0E0C15]' : 'bg-[#0E0C15]'}`}>
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           <img src={brainwave} width={190} height={40} alt="brainwave-logo"/>
         </a>
 
-        <nav className=" hidden fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent">
+        <nav className={`fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent 
+            ${openNavigation ? 'flex' : 'hidden'}`}>
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
         
               {navigation.map((item) => (
@@ -31,16 +44,20 @@ const Header = () => {
                   {item.title}
                 </a>
               ))}
-           
+              <HamburgerMenu/>
           </div>
 
         </nav>
 
-        <a className="button hidden mr-8 text lg:text-[#848188] transition-colors hover:text-white lg:block">
+        <a className="button hidden mr-8 lg:text-[#848188] transition-colors hover:text-white lg:block">
           New Account
         </a>
         <Button className="hidden lg:flex" href="#login">
             Sign In
+        </Button>
+
+        <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}>
+          <MenuSvg/>
         </Button>
         
       </div>
