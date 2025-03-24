@@ -6,7 +6,7 @@ import { GradientLight } from './design/Benefits'
 
 const Benefits = () => {
   return (
-    <Section id="features">
+    <Section id="features" crosses>
       <div className="container relative z-2">
         <Heading className="text-center md:max-w-md lg:max-w-2xl" title="Chat Smarter, Not Harder with Brainwave"/>
       
