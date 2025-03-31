@@ -8,7 +8,7 @@ import Button from './Button'
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex">
+      <div className="lg:flex max-w-[77.5rem] mx-auto  xl:max-w-[87.5rem] justify-between">
       
         <Heading className="text-center mb-4 md:mb-8 md:max-w-md lg:max-w-2xl" title="AI Chat App for seamless collaboration"/>
         <div className='max-w-[50%]'>
