@@ -7,7 +7,7 @@ import PricingCard from './PricingCard'
 const Pricing = () => {
   return (
     <Section className="overflow-hidden" id="pricing">
-      <div className="container relative z-2">
+      <div className="container relative z-2 ">
         <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
           <img 
             src={smallSphere}
@@ -27,13 +27,14 @@ const Pricing = () => {
         </div>
         <Heading title="Pay once, use forever" className="text-center" />
       </div>
-      <div className="">
+      <div className="lg:flex lg:justify-center">
         <PricingCard />
-        <div className='text-center mt-10'>
-          <a className="text-xs font-bold uppercase" href='/pricing'>See the full details</a>
-        </div>
+
         
       </div>
+      <div className='text-center mt-10'>
+          <a className="text-xs font-bold uppercase" href='/pricing'>See the full details</a>
+        </div>
     </Section>
   )
 }

@@ -5,7 +5,7 @@ import { check } from '../assets'
 
 const PricingCard = () => {
   return (
-    <div className="flex gap-[1rem] max-lg:flex-wrap">
+    <div className="flex gap-[1rem] max-lg:flex-wrap px-4">
       {pricing.map((item) =>(
         <div key={item.id} 
           className="w-[19rem] max-lg:w-full h-full px-6 border border-gray-800 rounded-3xl bg-gray-950 lg:w-auto 

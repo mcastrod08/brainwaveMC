@@ -8,7 +8,7 @@ import Generating from './Generating'
 
 const Services = () => {
   return (
-    <Section className="">
+    <Section className="" id="how-to-use">
       <Heading className="text-center" title="Generative AI for creators"/>
       <p className='text-center -mt-15 mb-20 text-gray-500'>something</p>
 
