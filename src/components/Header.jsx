@@ -28,9 +28,9 @@ const Header = () => {
           <img src={brainwave} width={190} height={40} alt="brainwave-logo"/>
         </a>
 
-        <nav className={`fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto  bg-gray-300
+        <nav className={`fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto lg:bg-transparent 
             ${openNavigation ? 'flex' : 'hidden'}`}>
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row ">
         
               {navigation.map((item) => (
                 <a 
@@ -49,7 +49,7 @@ const Header = () => {
 
         </nav>
 
-        <a className="button hidden mr-8 lg:text-[#848188] transition-colors hover:text-white lg:block">
+        <a className="button hidden mr-8 lg:text-[#848188] transition-colors hover:text-white lg:block" >
           New Account
         </a>
         <Button className="hidden lg:flex" href="#login">

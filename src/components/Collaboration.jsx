@@ -11,9 +11,9 @@ const Collaboration = () => {
       <div className="lg:flex max-w-[77.5rem] mx-auto  xl:max-w-[87.5rem] justify-between">
       
         <Heading className="text-center mb-4 md:mb-8 md:max-w-md lg:max-w-2xl" title="AI Chat App for seamless collaboration"/>
-        <div className='max-w-[50%]'>
+        <div className='lg:max-w-[50%]'>
         
-          <ul className="max-w-[70%] mb-10 md:mb-14">
+          <ul className="lg:max-w-[70%] mb-10 md:mb-14">
             {collabContent.map((item)=>(
               <li key={item.id} className="mb-3 py-3 px-[1rem]">
                 <div className="flex items-center">
